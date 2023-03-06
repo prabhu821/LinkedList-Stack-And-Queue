@@ -28,4 +28,20 @@ public class LinkedList
         }
         Console.WriteLine("{0} inserted into linked list", node.data);
     }
+
+    //UC2-Display List
+    public void Display()
+    {
+        Node temp = this.head;
+        if (temp == null)
+        {
+            Console.WriteLine("Linked List is empty");
+            return;
+        }
+        while (temp != null)
+        {
+            Console.WriteLine(temp.data);
+            temp = temp.next;
+        }
+    }
 }
