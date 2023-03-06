@@ -45,7 +45,7 @@ public class LinkedList
         }
     }
 
-    //ADD IN REVERSE ORDER
+    //UC3-Add in Reverse Order
     public void AddInReverseOrder(int data)
     {
         Node newNode = new Node(data);
@@ -59,5 +59,33 @@ public class LinkedList
             head = newNode;
             head.next = temp;
         }
+    }
+
+    //UC4-Add at Particular Position
+    internal Node InsertAtParticularPosition(int position, int data)
+    {
+        Node newestNode = new Node(data);
+        if (this.head == null)
+        {
+            return newestNode;
+        }
+        if (position == 0)
+        {
+            newestNode.next = this.head;
+            this.head = newestNode;
+            return this.head;
+        }
+        Node prev = null;
+        Node current = this.head;
+        int count = 0;
+        while (current != null && count < position)
+        {
+            prev = current;
+            current = current.next;
+            count++;
+        }
+        newestNode.next = prev.next;
+        prev.next = newestNode;
+        return this.head;
     }
 }
