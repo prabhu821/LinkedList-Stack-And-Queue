@@ -62,7 +62,7 @@ public class LinkedList
     }
 
     //UC4-Add at Particular Position
-    internal Node InsertAtParticularPosition(int position, int data)
+    internal Node AddAtParticularPosition(int position, int data)
     {
         Node newestNode = new Node(data);
         if (this.head == null)
@@ -137,5 +137,24 @@ public class LinkedList
             count++;
         }
         return count;
+    }
+
+    //UC8-Size
+    public void Size()
+    {
+        Node temp = this.head;
+        int count = 0;
+        if (temp == null)
+        {
+            Console.WriteLine("LinkedList is empty");
+        }
+        Console.Write("LinkedList is as : ");
+        while (temp != null)
+        {
+            Console.Write(temp.data + " ");
+            temp = temp.next;
+            count++;
+        }
+        Console.WriteLine("\nSize of LinkedList is " + count);
     }
 }
