@@ -7,13 +7,14 @@
             Console.WriteLine("LinkedList-Stack-and-Queue!");
             LinkedList list = new LinkedList();
             LinkedListStack stack = new LinkedListStack();
+            LinkedListQueue queue = new LinkedListQueue();
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine("\nSelect the operation to perform \n1.Create Linked List \n2.Display \n3.Add In Reverse Order " +
                     "\n4.Add At Particular Position \n5.Remove First Node \n6.Remove Last Node \n7.Search \n8.Size of List " +
                     "\n9.Insert at Particular Position \n10.Delete Node At Particular Position \n11.Create Stack \n12.Display Stack " +
-                    "\n13.Peek \n14.Pop \n15.Exit");
+                    "\n13.Peek \n14.Pop \n15.Create Queue \n16.Display Queue \n17.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -79,6 +80,15 @@
                     case 14:
                         stack.Pop();
                         break;
+                    case 15:
+                        queue.Enqueue(56);
+                        queue.Enqueue(30);
+                        queue.Enqueue(70);
+                        break;
+                    case 16:
+                        queue.Display();
+                        break;
+                    
                     default:
                         flag = false;
                         break;
