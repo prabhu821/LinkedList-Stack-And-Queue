@@ -39,4 +39,25 @@ public class LinkedListStack
             temp = temp.next;
         }
     }
+
+    //PEEK AND POP OPERATION
+    public void Peek()//will return top value but not delete it
+    {
+        if (this.top == null)
+        {
+            Console.WriteLine("Stack is Empty");
+            return;
+        }
+        Console.WriteLine("{0} is in the top of the stack", this.top.data);
+    }
+    public void Pop()//will delete top data nd return
+    {
+        if (this.top == null)
+        {
+            Console.WriteLine("Stack is Empty");
+            return;
+        }
+        Console.WriteLine("Value Popped is {0}", this.top.data);
+        this.top = this.top.next;
+    }
 }

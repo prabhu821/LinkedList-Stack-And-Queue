@@ -12,7 +12,8 @@
             {
                 Console.WriteLine("\nSelect the operation to perform \n1.Create Linked List \n2.Display \n3.Add In Reverse Order " +
                     "\n4.Add At Particular Position \n5.Remove First Node \n6.Remove Last Node \n7.Search \n8.Size of List " +
-                    "\n9.Insert at Particular Position \n10.Delete Node At Particular Position \n11.Create Stack \n12.Exit");
+                    "\n9.Insert at Particular Position \n10.Delete Node At Particular Position \n11.Create Stack \n12.Display Stack " +
+                    "\n13.Peek \n14.Pop \n15.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -68,6 +69,15 @@
                         stack.Push(70);
                         stack.Push(30);
                         stack.Push(56);
+                        break;
+                    case 12:
+                        stack.Display();
+                        break;
+                    case 13:
+                        stack.Peek();
+                        break;
+                    case 14:
+                        stack.Pop();
                         break;
                     default:
                         flag = false;
