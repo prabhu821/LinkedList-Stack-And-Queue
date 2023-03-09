@@ -8,7 +8,7 @@ namespace LinkedList_Stack_And_Queue;
 
 public class LinkedListQueue
 {
-    //QUEUE CREATED
+    //uc3-QUEUE CREATED
     Node head = null;
     public void Enqueue(int data)
     {
@@ -29,7 +29,7 @@ public class LinkedListQueue
         Console.WriteLine("{0} is inserted into Queue", node.data);
     }
 
-    //DEQUEUE
+    //uc4-DEQUEUE
     public void Dequeue()
     {
         if (this.head == null)
@@ -45,7 +45,7 @@ public class LinkedListQueue
         Display();
     }
 
-    //DISPLAY
+    //uc3-DISPLAY
     public void Display()
     {
         Node temp = this.head;

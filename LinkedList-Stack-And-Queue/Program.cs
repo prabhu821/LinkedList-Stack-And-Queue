@@ -14,7 +14,7 @@
                 Console.WriteLine("\nSelect the operation to perform \n1.Create Linked List \n2.Display \n3.Add In Reverse Order " +
                     "\n4.Add At Particular Position \n5.Remove First Node \n6.Remove Last Node \n7.Search \n8.Size of List " +
                     "\n9.Insert at Particular Position \n10.Delete Node At Particular Position \n11.Create Stack \n12.Display Stack " +
-                    "\n13.Peek \n14.Pop \n15.Create Queue \n16.Display Queue \n17.Exit");
+                    "\n13.Peek \n14.Pop \n15.Create Queue \n16.Display Queue \n17.Dequeue \n18.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -88,7 +88,9 @@
                     case 16:
                         queue.Display();
                         break;
-                    
+                    case 17:
+                        queue.Dequeue();
+                        break;
                     default:
                         flag = false;
                         break;
